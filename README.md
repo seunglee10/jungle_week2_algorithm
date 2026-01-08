@@ -41,6 +41,7 @@ git init
 git remote add origin <본인-저장소-URL>
 git add .
 git commit -m "Initial commit"
+git branch -M main
 git push -u origin main
 
 ```
