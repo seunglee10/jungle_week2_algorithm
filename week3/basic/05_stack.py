@@ -47,10 +47,14 @@ def is_valid_parentheses(s):
         if st == "(":
             stack.append("(")
         elif st == ")":
-            if len(stack) == 0:
+            if len(stack) > 0:
+                stack.pop()
+            else:
                 return False
-            stack.pop()
-    return len(stack) == 0
+    if len(stack) == 0:
+        return True
+    else:
+        return False
 
     pass
 
